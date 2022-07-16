@@ -14,6 +14,5 @@ public class JavaWriter implements ItemWriter<BatchResult> {
 	@Override
 	public void write(List<? extends BatchResult> items) throws Exception {
 		// Succeeding logic
-		items.forEach(batchResult -> log.info("ID: {}", batchResult.getId()));
 	}
 }

@@ -38,7 +38,7 @@ public class JavaBatchConfig {
 	@Autowired private JavaProcessor javaProcessor;
 
 	// TODO uncomment when using custom writer
-	@Autowired private JavaWriter javaWriter;
+	// @Autowired private JavaWriter javaWriter;
 
 	@Bean
 	public FlatFileItemReader<BatchResult> flatFileItemReader() {
@@ -85,7 +85,7 @@ public class JavaBatchConfig {
 	@Bean
 	public AsyncItemWriter<BatchResult> asyncItemWriter() {
 		AsyncItemWriter<BatchResult> asyncItemWriter = new AsyncItemWriter<>();
-		asyncItemWriter.setDelegate(javaWriter);
+		asyncItemWriter.setDelegate(flatFileItemWriter());
 
 		return asyncItemWriter;
 	}

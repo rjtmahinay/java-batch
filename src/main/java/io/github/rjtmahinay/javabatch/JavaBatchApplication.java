@@ -8,12 +8,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import javax.annotation.PostConstruct;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 @SpringBootApplication
 @Slf4j
 public class JavaBatchApplication implements CommandLineRunner {
@@ -43,12 +37,4 @@ public class JavaBatchApplication implements CommandLineRunner {
 			log.info("Job Succeeded");
 		}
 	}
-
-//	@PostConstruct
-//	public void initialize() throws IOException {
-//		boolean isFileExists = Files.exists(Paths.of("output_file/OUTPUT_BATCH_FILE.txt"));
-//		if(isFileExists) {
-//			Files.delete(Path.of("output_file/OUTPUT_BATCH_FILE.txt"));
-//		}
-//	}
 }
